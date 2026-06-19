@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Negociación & Venta Inmobiliaria - Nivel PRO</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Montserrat (Títulos fuertes) y Inter (Lectura clara) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Configuración Tailwind personalizada -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B132B',    /* Azul muy oscuro */
+                            blue: '#1C2541',    /* Azul corporativo */
+                            light: '#3A506B',   /* Azul medio */
+                            accent: '#F5A623',  /* Naranja/Dorado para botones CTA */
+                            accentHover: '#E09612',
+                            bg: '#F8F9FA'       /* Gris muy claro para fondos */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        display: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .font-display { font-family: 'Montserrat', sans-serif; }
+        
+        /* Patrón sutil para fondos claros */
+        .bg-pattern {
+            background-color: #F8F9FA;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        /* Utilidad para el subrayado dorado */
+        .underline-accent {
+            position: relative;
+            z-index: 1;
+        }
+        .underline-accent::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background-color: rgba(245, 166, 35, 0.3);
+            z-index: -1;
+            transform: skewX(-15deg);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+    <!-- BLOQUE #1 - HERO SECTION -->
+    <header class="relative bg-brand-dark text-white overflow-hidden pt-10 pb-20 md:py-24">
+        <!-- Decoración de fondo -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-blue opacity-50 transform skew-x-12 translate-x-20 hidden md:block z-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+                
+                <!-- Textos (Izquierda) -->
+                <div class="md:w-[55%]">
+                    <span class="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-brand-accent font-semibold text-sm tracking-widest uppercase mb-6 shadow-sm">
+                        Curso Negociación & Venta Inmobiliaria - Nivel Pro
+                    </span>
+                    
+                    <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                        El protocolo para pasar de ser un agente que lucha por captar, a un <span class="text-brand-accent">asesor que domina</span> la psicología de la decisión de compra.
+                    </h1>
+                    
+                    <p class="text-lg text-gray-300 mb-10 leading-relaxed font-light border-l-4 border-brand-accent pl-4">
+                        Un programa para agentes inmobiliarios que desean dejar de improvisar sus conversaciones comerciales y dominar un método basado en la confianza, la comunicación, el valor y la ayuda real a la compra.
+                    </p>
+                    
+                    <a href="#precio" class="inline-flex items-center justify-center bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-display font-bold text-lg px-8 py-5 rounded shadow-[0_4px_14px_0_rgba(245,166,35,0.39)] transition-all transform hover:-translate-y-1 w-full sm:w-auto text-center">
+                        ¡QUIERO ACCEDER AL CURSO!
+                        <i class="fa-solid fa-arrow-right ml-3"></i>
+                    </a>
+                    <p class="mt-3 text-sm text-gray-400 italic">Comienza Ahora. Acceso Inmediato.</p>
+                </div>
+
+                <!-- Imagen (Derecha) -->
+                <div class="md:w-[45%] relative w-full max-w-md mx-auto md:max-w-none">
+                    <div class="absolute inset-0 bg-brand-accent rounded-lg transform translate-x-4 translate-y-4"></div>
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeefa?auto=format&fit=crop&w=800&q=80" alt="Asesor Inmobiliario Profesional" class="relative z-10 rounded-lg shadow-2xl w-full object-cover aspect-[4/5] md:aspect-square">
+                    
+                    <!-- Elemento flotante simulando el título sobre la imagen (como pedía el PDF) -->
+                    <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur p-4 rounded shadow-xl z-20 hidden sm:block">
+                        <p class="text-brand-dark font-bold text-sm uppercase tracking-wider mb-1"><i class="fa-solid fa-award text-brand-accent mr-2"></i>Nivel Pro</p>
+                        <p class="text-gray-600 text-xs leading-tight">Domina la psicología de venta y transforma tus resultados.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- BLOQUE #2 - GOOGLE REVIEWS (Plugin simulado) -->
+    <section class="py-8 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 text-center">
+                <div class="flex items-center gap-2">
+                    <i class="fa-brands fa-google text-2xl text-blue-500"></i>
+                    <div class="flex text-yellow-400 text-xl">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p class="font-display font-bold text-gray-800">Excelente 4.9/5</p>
+                <p class="text-gray-500 text-sm hidden md:block">| Basado en opiniones reales de agentes inmobiliarios</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE #3 - IDENTIFICACIÓN DEL PROBLEMA -->
+    <section class="py-20 bg-pattern">
+        <div class="max-w-4xl mx-auto px-6">
+            
+            <div class="mb-16">
+                <h2 class="font-display text-3xl md:text-4xl font-extrabold text-brand-dark mb-6">El Fin de la Improvisación</h2>
+                <div class="w-20 h-1 bg-brand-accent mb-8"></div>
+                
+                <div class="space-y-6 text-lg text-gray-700 leading-relaxed font-light">
+                    <p>El mercado inmobiliario actual sufre un error de percepción fundamental: muchos agentes creen que su éxito depende exclusivamente de tener propiedades en cartera.</p>
+                    <p>La realidad, sin embargo, es otra: <strong>tener propiedades no es sinónimo de venderlas.</strong> La verdadera brecha entre el agente que sobrevive y el que prospera radica en la capacidad de ejecutar un proceso de venta profesional.</p>
+                    <p class="bg-white p-6 border-l-4 border-brand-light shadow-sm italic rounded-r">
+                        La gran idea es sencilla: no se trata de "vender" en el sentido tradicional, sino de dominar el concepto de <span class="font-semibold text-brand-blue">ayudar a comprar</span>. Quienes comprenden que la venta es un proceso estructurado -y no un acto de suerte o presión- son quienes lideran el sector.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="font-display text-2xl md:text-3xl font-bold text-brand-dark mb-6">No Te Falta Esfuerzo</h3>
+                
+                <div class="space-y-6 text-lg text-gray-700 leading-relaxed font-light">
+                    <p>Trabajas, atiendes consultas, publicas propiedades, respondes mensajes, realizas visitas y haces seguimiento. Sin embargo, es posible que algunas conversaciones no avancen como esperabas.</p>
+                    
+                    <ul class="space-y-4 my-8 bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                        <li class="flex items-start"><i class="fa-solid fa-xmark text-red-500 mt-1 mr-3"></i> <span>Un propietario cuestiona tus honorarios.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-xmark text-red-500 mt-1 mr-3"></i> <span>Un comprador interesado deja de responder.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-xmark text-red-500 mt-1 mr-3"></i> <span>Una visita aparentemente positiva termina sin decisión.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-xmark text-red-500 mt-1 mr-3"></i> <span>Una objeción sobre el precio te obliga a improvisar.</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-xmark text-red-500 mt-1 mr-3"></i> <span>O quizá sabes que podrías haber defendido mejor el valor del inmueble, pero las palabras adecuadas llegaron demasiado tarde.</span></li>
+                    </ul>
+
+                    <p class="font-medium text-brand-blue text-xl">Esto no significa que seas un mal agente.</p>
+                    <p>Significa que probablemente has aprendido mucho sobre propiedades, documentación, zonas y captación, pero <strong>nadie te ha enseñado de manera estructurada cómo piensa, siente y decide un cliente inmobiliario.</strong></p>
+                    <p>Por eso, en determinadas situaciones, puedes sentir que dependes demasiado de tu intuición.</p>
+                    <p>Unas veces funciona. Otras no. Y cuando no funciona, resulta difícil saber qué parte de la conversación deberías cambiar.</p>
+                    <p>La diferencia entre un agente que informa y un profesional que influye éticamente no está en hablar más. Está en comprender mejor al cliente, formular las preguntas apropiadas, presentar el valor con claridad y guiar la decisión sin presionar.</p>
+                    
+                    <!-- Plugin Google Intermedio según PDF -->
+                    <div class="my-10 bg-white py-6 border-y border-gray-200 text-center text-sm text-gray-500 flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-google text-blue-500 text-lg"></i> 
+                        <span class="font-bold text-gray-800">Reviews de Google:</span> "Este curso cambió mi forma de gestionar objeciones."
+                    </div>
+
+                    <p>Si sientes que su capacidad de cierre no está a la altura de sus esfuerzos, no es un fallo de su mercado ni una falta de talento; es una consecuencia de no haber sistematizado su comunicación.</p>
+                    <p>Muchos agentes enfrentan a diario crisis de confianza, dificultades en la escucha activa y un desgaste emocional innecesario al no saber gestionar las objeciones con precisión.</p>
+                    <p class="font-semibold text-brand-dark">Esta frustración es el síntoma claro de operar sin un método que ordene sus habilidades de persuasión y cualificación de clientes. Si su agenda está llena pero sus resultados son inconsistentes, la causa es técnica, no operativa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE #4 - CONSECUENCIAS DE NO RESOLVERLO -->
+    <section class="py-20 bg-brand-dark text-white relative overflow-hidden">
+        <!-- Overlay oscuro -->
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80')] opacity-5 bg-cover bg-center"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+            <h2 class="font-display text-3xl md:text-4xl font-bold mb-8 text-white">Improvisar Tiene un Coste</h2>
+            
+            <p class="text-lg text-gray-300 font-light mb-10 leading-relaxed">
+                Improvisar puede parecer natural cuando se tiene experiencia. Pero también puede convertirse en uno de los principales límites del crecimiento profesional.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6 text-left mb-12">
+                <div class="bg-white/10 p-6 rounded border border-white/10">
+                    <p class="text-gray-300 font-light">Cada conversación sin estructura puede terminar en una oportunidad que se enfría.</p>
+                </div>
+                <div class="bg-white/10 p-6 rounded border border-white/10">
+                    <p class="text-gray-300 font-light">Cada presentación centrada únicamente en características puede hacer que el cliente compare solo precios.</p>
+                </div>
+                <div class="bg-white/10 p-6 rounded border border-white/10">
+                    <p class="text-gray-300 font-light">Cada objeción mal interpretada puede alejar a una persona que todavía necesitaba información, confianza o tiempo para decidir.</p>
+                </div>
+                <div class="bg-white/10 p-6 rounded border border-white/10">
+                    <p class="text-gray-300 font-light">Y cada seguimiento realizado sin una estrategia puede transmitir insistencia en lugar de profesionalidad.</p>
+                </div>
+            </div>
+
+            <p class="text-xl text-white font-medium mb-6">El coste no aparece únicamente en las operaciones que no se cierran.</p>
+            <p class="text-lg text-gray-300 font-light mb-10 leading-relaxed">
+                También aparece cuando aceptas inmuebles poco competitivos, inviertes tiempo en compradores que nunca estuvieron realmente preparados, reduces tus honorarios para conservar una captación o dependes excesivamente de portales y publicidad para generar nuevas oportunidades.<br><br>
+                Mientras no exista un proceso comercial claro, tus resultados dependerán demasiado de la personalidad del cliente, de las circunstancias del mercado o de que la conversación "salga bien".
+            </p>
+
+            <p class="font-display text-2xl font-bold text-brand-accent mb-10">Un verdadero profesional no deja una parte tan importante de su negocio al azar</p>
+
+            <a href="#precio" class="inline-flex flex-col items-center justify-center bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-display font-bold text-lg px-10 py-4 rounded shadow-lg transition-all transform hover:scale-105">
+                <span>¡QUIERO ACCEDER AL CURSO!</span>
+                <span class="text-sm font-normal normal-case">Comienza ahora</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- BLOQUE #5 - PRESENTACIÓN DE LA OPORTUNIDAD -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-light font-bold tracking-widest uppercase text-sm mb-2 block">La Solución</span>
+                <h2 class="font-display text-4xl font-extrabold text-brand-dark">Existe una Forma Mejor</h2>
+                <div class="w-16 h-1 bg-brand-accent mx-auto mt-6"></div>
+            </div>
+
+            <div class="text-lg text-gray-700 leading-relaxed font-light space-y-6">
+                <p>Vender un inmueble no consiste en ayudarle a comprender qué opción responde mejor a sus prioridades, qué valor recibirá y por qué puede tomar una decisión con confianza. Este cambio de perspectiva modifica todo el proceso comercial.</p>
+                
+                <div class="grid sm:grid-cols-2 gap-6 my-10">
+                    <div class="bg-brand-bg p-6 rounded-lg border-l-4 border-brand-accent">
+                        <p><strong>Dejas de perseguir respuestas</strong> y comienzas a generar conversaciones.</p>
+                    </div>
+                    <div class="bg-brand-bg p-6 rounded-lg border-l-4 border-brand-accent">
+                        <p><strong>Dejas de defender el precio</strong> y aprendes a demostrar valor.</p>
+                    </div>
+                    <div class="bg-brand-bg p-6 rounded-lg border-l-4 border-brand-accent">
+                        <p><strong>Dejas de recitar características</strong> y empiezas a relacionarlas con las necesidades reales del comprador.</p>
+                    </div>
+                    <div class="bg-brand-bg p-6 rounded-lg border-l-4 border-brand-accent">
+                        <p><strong>Dejas de interpretar cada objeción como un rechazo</strong> y comienzas a verla como una petición de información, seguridad o claridad.</p>
+                    </div>
+                </div>
+
+                <p class="text-center font-display text-2xl text-brand-blue font-bold my-8">La venta inmobiliaria profesional se basa en escuchar, diagnosticar, argumentar y acompañar.</p>
+
+                <p>Cuando aplicas este principio, tus conversaciones resultan más naturales, tus recomendaciones adquieren mayor credibilidad y el cliente percibe que no está ante alguien que quiere venderle, sino ante un profesional que sabe <span class="underline-accent font-semibold">ayudarle a comprar</span>.</p>
+                <p>Esta es la oportunidad que plantea el curso <strong>Negociación & Venta Inmobiliaria - Nivel PRO</strong>: sustituir la improvisación por un proceso que puedas comprender, practicar y aplicar en cada nueva operación.</p>
+            </div>
+
+            <!-- Plugin Google Reviews según PDF -->
+            <div class="mt-12 bg-gray-50 rounded-xl p-8 border border-gray-100 text-center">
+                <div class="flex justify-center text-yellow-400 text-2xl mb-4">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="italic text-gray-600 mb-4">"Sustituir la improvisación por este método ha duplicado mi tasa de captación en exclusiva. 100% recomendado para profesionales."</p>
+                <p class="font-bold text-brand-dark flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-google text-blue-500"></i> Reviews de Google
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE #6 - EL MECANISMO DIFERENCIADOR -->
+    <section class="py-20 bg-brand-bg border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-display text-3xl md:text-4xl font-extrabold text-brand-dark mb-8 text-center">Un Método, No Trucos</h2>
+            
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100 text-lg text-gray-700 leading-relaxed font-light space-y-6">
+                <p>Muchos cursos presentan frases de cierre, respuestas rápidas o técnicas aisladas. El problema es que una frase aprendida de memoria pierde eficacia cuando no existe una estructura que la sostenga.</p>
+                <p class="font-semibold text-brand-blue">Este curso sigue un recorrido diferente.</p>
+                
+                <ul class="space-y-6 mt-6">
+                    <li class="flex">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-blue text-white flex items-center justify-center font-bold font-display mr-4">1</div>
+                        <div>
+                            <p><strong>Primero</strong> comprenderás los principios que gobiernan una venta inmobiliaria profesional. Después aprenderás cómo se desarrolla el proceso de decisión, qué razones impulsan realmente una compra y cuáles son las habilidades que debe dominar un agente para acompañarla.</p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-blue text-white flex items-center justify-center font-bold font-display mr-4">2</div>
+                        <div>
+                            <p><strong>A partir de ahí</strong>, aprenderás a presentar un inmueble desde el valor, no únicamente desde el precio; a transformar sus características en beneficios relevantes; y a explicar el coste de la compra con mayor claridad y perspectiva.</p>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-blue text-white flex items-center justify-center font-bold font-display mr-4">3</div>
+                        <div>
+                            <p><strong>Finalmente</strong>, trabajarás la herramienta que conecta todas las fases anteriores: la comunicación. Descubrirás cómo determinadas palabras facilitan la comprensión y generan acción, mientras que otras despiertan resistencia, desconfianza o indecisión.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="p-6 bg-blue-50 text-brand-dark rounded mt-8 border-l-4 border-brand-light">
+                    <p class="font-bold text-xl mb-2">No se trata de memorizar un guion rígido. Se trata de desarrollar criterio comercial.</p>
+                    <p>Ese criterio te permitirá reconocer qué necesita escuchar cada cliente, adaptar tu mensaje sin perder autenticidad y conducir la conversación desde el primer contacto hasta la decisión final.</p>
+                </div>
+                
+                <p class="text-center font-medium mt-6">El resultado no depende de un truco puntual, sino de una metodología completa que integra conocimiento, comunicación y práctica profesional.</p>
+            </div>
+
+            <div class="text-center mt-8 text-sm text-gray-500">
+                [ Reviews Extra Placeholder ]
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE #7 - LA GARANTÍA -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="border-4 border-brand-accent rounded-3xl p-8 md:p-12 relative bg-white shadow-2xl">
+                
+                <!-- Sello Izquierda (Simulado visualmente centrado para móviles, izq para desktop) -->
+                <div class="md:absolute md:-left-12 md:top-1/2 md:transform md:-translate-y-1/2 bg-brand-dark w-32 h-32 rounded-full flex flex-col items-center justify-center text-white shadow-xl border-4 border-white mb-6 mx-auto md:mx-0 z-10">
+                    <span class="font-display font-black text-3xl">100%</span>
+                    <span class="text-[10px] uppercase tracking-widest text-center px-2 leading-tight mt-1 text-brand-accent">Devolución<br>Garantizada</span>
+                </div>
+
+                <div class="md:pl-28 text-center md:text-left">
+                    <h2 class="font-display text-3xl font-extrabold text-brand-dark mb-4">Garantía para tu Tranquilidad Absoluta.</h2>
+                    <p class="text-gray-600 font-light mb-6">Con esta garantía de satisfacción, queremos darte la tranquilidad de que valoramos tu inversión y confiamos en la calidad de nuestro contenido.</p>
+                    
+                    <p class="text-gray-800 font-medium leading-relaxed bg-brand-bg p-6 rounded-lg mb-6">
+                        Te ofrecemos una garantía de integridad total: si al completar el curso y aplicar los protocolos que enseñamos, no encuentras una mejora sustancial en la claridad de tu enfoque y en la calidad de tus procesos, procederemos a la devolución íntegra de tu inversión.
+                    </p>
+
+                    <p class="text-gray-600 font-light text-sm">
+                        Esta no es una garantía para "probar" el contenido; es una declaración de confianza absoluta en la capacidad de este sistema para transformar tu carrera profesional. El riesgo es totalmente nuestro; tu única responsabilidad es implementar el conocimiento.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE #8 - CONTENIDO + PRECIO -->
+    <section id="precio" class="py-24 bg-brand-dark text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Contenido del Curso (Columna Izquierda 7/12) -->
+                <div class="lg:col-span-7">
+                    <h2 class="font-display text-4xl font-bold mb-10 text-white border-b border-white/10 pb-4">Contenido del Curso</h2>
+                    
+                    <div class="grid sm:grid-cols-2 gap-x-8 gap-y-4 text-gray-300 font-light text-sm md:text-base">
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>Los Principios de la Venta Inmobiliaria</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>El Concepto de Venta Inmobiliaria</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>El Proceso de Venta Inmobiliaria</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>Las 3 Reglas de Oro de la Venta inmobiliaria</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>Habilidades y Competencias para Vender Inmuebles</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>Cómo Ayudar a Comprar a tus Clientes</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>El Concepto Real de Ayudar a Comprar</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>El Enemigo nº.1 de la Venta inmobiliaria</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>Cómo Se Toma la Decisión de Comprar un Inmueble</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>Las Verdaderas Razones de Compra</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>Cómo Vender Valor y No Precio</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>Conociendo Bien lo que Vendes</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>Características, Ventajas y Beneficios de un Inmueble</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>Cómo Extraer Beneficios de Características</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>El Concepto del Costo en la Compra de un Inmueble</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>La Importancia de la Comunicación en la Venta inmobiliaria</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>Las Palabras y Frases Mágicas de la Venta inmobiliaria</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>Palabras y Frases Prohibidas de la Venta Inmobiliaria</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-check text-brand-accent mt-1 mr-3"></i> <span>Cómo Crear Acción Mediante las Palabras</span></div>
+                        <div class="flex items-start"><i class="fa-solid fa-plus text-gray-500 mt-1 mr-3"></i> <span>Y otros temas adicionales...</span></div>
+                    </div>
+                </div>
+
+                <!-- Caja de Precio (Columna Derecha 5/12) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-10 text-gray-800 lg:-mt-10 border-t-8 border-brand-accent relative z-10">
+                        <div class="text-center mb-8">
+                            <h3 class="font-display font-bold text-xl text-brand-dark mb-2">Elige tu Futuro con el curso</h3>
+                            <p class="text-brand-light font-bold">Negociación & Venta Inmobiliaria - Nivel PRO</p>
+                        </div>
+
+                        <div class="text-center mb-8">
+                            <span class="font-display font-black text-6xl text-brand-dark">$157</span>
+                            <span class="text-xl text-gray-500 font-bold">USD</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-10 text-sm md:text-base border-t border-b border-gray-100 py-6">
+                            <li class="flex items-center"><i class="fa-solid fa-layer-group text-brand-blue w-6"></i> <span>Curso online de <strong>5 módulos</strong></span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-list-ol text-brand-blue w-6"></i> <span>Con <strong>22 temas</strong> en total</span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-ban text-brand-blue w-6"></i> <span><strong>Cero rellenos</strong></span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-infinity text-brand-blue w-6"></i> <span>Acceso <strong>inmediato e ilimitado</strong></span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-video text-brand-blue w-6"></i> <span>Videos explicativos en cada tema</span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-file-pdf text-brand-blue w-6"></i> <span>Descarga de contenido en ficheros PDF</span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-arrows-rotate text-brand-blue w-6"></i> <span>Actualizaciones gratuitas</span></li>
+                            <li class="flex items-center"><i class="fa-brands fa-whatsapp text-brand-blue w-6"></i> <span>Soporte durante 2 meses (Email y WhatsApp)</span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-clock text-brand-blue w-6"></i> <span>Aprendes a tu ritmo, a tu tiempo</span></li>
+                        </ul>
+
+                        <a href="#" class="flex flex-col items-center justify-center bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-display font-bold text-lg px-8 py-4 rounded shadow-lg transition-all transform hover:scale-105 w-full text-center">
+                            <span>¡QUIERO ACCEDER AL CURSO!</span>
+                            <span class="text-sm font-normal normal-case">Comienza ahora</span>
+                        </a>
+                        <p class="text-center text-xs text-gray-400 mt-4"><i class="fa-solid fa-lock mr-1"></i> Pago seguro y cifrado</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE #9 - LLAMADA A LA ACCIÓN FINAL -->
+    <section class="py-24 bg-pattern border-t border-gray-200">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="font-display text-4xl font-extrabold text-brand-dark mb-8">Da el Siguiente Paso</h2>
+            
+            <p class="text-lg text-gray-700 font-light mb-6 leading-relaxed">
+                La experiencia es valiosa. Pero la experiencia sin un método puede obligarte a aprender lentamente, operación tras operación, mediante errores que cuestan tiempo, confianza y oportunidades.
+            </p>
+            
+            <p class="text-lg text-gray-700 font-light mb-6 leading-relaxed">
+                <strong>Negociación & Venta Inmobiliaria - Nivel PRO</strong> ha sido creado para ayudarte a ordenar lo que ya sabes, corregir aquello que puede estar limitando tus resultados y desarrollar las habilidades comerciales que diferencian a un agente informado de un verdadero asesor profesional.
+            </p>
+            
+            <p class="text-xl text-brand-blue font-medium mb-12">
+                Accede ahora al curso y comienza a convertir tus conocimientos en una forma más eficaz, humana y profesional de vender inmuebles.
+            </p>
+            
+            <p class="font-display text-2xl font-bold text-brand-dark mb-10 italic">
+                "La puerta está abierta para quienes deciden liderar, en lugar de seguir. Te espero dentro."
+            </p>
+
+            <a href="#precio" class="inline-flex flex-col items-center justify-center bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-display font-bold text-lg px-12 py-5 rounded shadow-[0_4px_14px_0_rgba(245,166,35,0.39)] transition-all transform hover:-translate-y-1">
+                <span>¡QUIERO ACCEDER AL CURSO!</span>
+                <span class="text-sm font-normal normal-case mt-1">Comienza ahora</span>
+            </a>
+
+            <div class="mt-12 text-sm text-gray-500">
+                [ Reviews Extra Placeholder ]
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark border-t border-white/10 py-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-gray-400 text-sm">
+                &copy; 2026 Negociación & Venta Inmobiliaria. Todos los derechos reservados.
+            </div>
+            <div class="flex gap-6 text-sm">
+                <a href="#" class="text-gray-400 hover:text-white transition">Aviso Legal</a>
+                <a href="#" class="text-gray-400 hover:text-white transition">Política de Ventas</a>
+                <a href="#" class="text-gray-400 hover:text-white transition">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
